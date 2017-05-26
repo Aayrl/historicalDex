@@ -24,10 +24,18 @@
 	<script>
 		var completed = [
 		36,
-		134
+		63,
+		71,
+		78,
+		103,
+		113,
+		129,
+		134,
+		139,
+		140
 		];
 		$( document ).ready(function() {
-			var completePerc = ((completed.length)/(251))*100;
+			var completePerc = (((completed.length)/(251))*100).toFixed(2);
 			$('.progress-bar').css('width', completePerc+'%').attr('aria-valuenow', completePerc);
 			$('#totalProg').html(completed.length + ' / 251 (' + completePerc + '%)');
 			var html = "";
