@@ -51,12 +51,16 @@
 				}
 				$("#hdex-gallery").append(html);
 			}
-		});
-		$(".thumb").on("click", function() {
-			id = $(this).attr('data-pokenum'); 
-			url = "./img/full/" + id + ".png";
-			$('#imagepreview').attr('src',url);
-			$('#large-image').modal('show');
+			
+			$(".thumb").on("click", function() {
+				id = 0;
+				id = $(this).attr('data-pokenum'); 
+				url = "./img/full/" + id + ".png";
+				$('#imagepreview').attr('src',url);
+				$('#large-image').modal('show');
+				return false;
+			});
+			
 		});
 	</script>
 </head>
