@@ -8,7 +8,19 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 
-
+	<style>
+		.panel-body {
+			text-align:center; 
+		}
+		.pokegot {
+			background-color:#00AA00;
+		}
+		.pokenot {
+			background-color:#AA0000;
+		}
+	</style>
+	
+	
 	<script>
 		var completed = [
 		36,
@@ -16,15 +28,16 @@
 		];
 		$( document ).ready(function() {
 			var html = "";
-			for(i = 1; i < 40; i++) { 
+			for(i = 1; i < 251; i++) { 
 				html = "";
 				html = html + '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><div class="panel panel-default"><div class="panel-body">';
 				if(jQuery.inArray(i, completed) !== -1) {
-					html = html + '<img src="/img/thumb/t_' + i + '.png" alt="' + i + '">';
+					html = html + '<img class="img-rounded" src="./img/thumb/t_' + i + '.png" alt="' + i + '">';
+					html = html + '</div><div class="panel-footer"><span class="badge pokegot">' + i + '</span></div></div></div>';
 				} else {
-					html = html + '<img src="/img/thumb/t_000.png" alt="' + i + '">';
+					html = html + '<img class="img-rounded" src="./img/thumb/t_0.png" alt="' + i + '">';
+					html = html + '</div><div class="panel-footer"><span class="badge pokenot">' + i + '</span></div></div></div>';
 				}
-				html = html + '</div><div class="panel-footer"><span class="badge">' + i + '</span></div></div></div>';
 				$("#hdex-gallery").append(html);
 			}
 		});
@@ -39,12 +52,7 @@
   
 <div class="container">
 	<div class="row" id="hdex-gallery">
-		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-			<div class="panel panel-default">
-				<div class="panel-body">Test</div>
-				<div class="panel-footer"><span class="badge">1</span> This is a panel.</div>
-			</div>
-		</div>
+
 	</div>
 </div>
 
