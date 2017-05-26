@@ -43,7 +43,7 @@
 				html = "";
 				html = html + '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><div class="panel panel-default"><div class="panel-body">';
 				if(jQuery.inArray(i, completed) !== -1) {
-					html = html + '<img class="img-rounded" src="./img/thumb/t_' + i + '.png" alt="' + i + '">';
+					html = html + '<a href="#" class="thumb" data-pokenum="' + i + '"><img class="img-rounded" src="./img/thumb/t_' + i + '.png" alt="' + i + '"></a>';
 					html = html + '</div><div class="panel-footer"><span class="badge pokegot">' + i + '</span></div></div></div>';
 				} else {
 					html = html + '<img class="img-rounded" src="./img/thumb/t_0.png" alt="' + i + '">';
@@ -52,9 +52,32 @@
 				$("#hdex-gallery").append(html);
 			}
 		});
+		$(".thumb").on("click", function() {
+			id = $(this).attr('data-pokenum'); 
+			url = "./img/full/" + id + ".png";
+			$('#imagepreview').attr('src',url);
+			$('#large-image').modal('show');
+		});
 	</script>
 </head>
 <body>
+
+<div class="modal fade" id="large-image" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title" id="preview">Image</h4>
+      </div>
+      <div class="modal-body">
+        <img src="" id="imagepreview">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="jumbotron text-center">
   <h1>Historical Dex</h1>
