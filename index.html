@@ -9,7 +9,8 @@
 	<script src="/js/bootstrap.min.js"></script>
 
 	<style>
-		.panel-body {
+		.panel-body,
+		.modal-body {
 			text-align:center; 
 		}
 		.pokegot {
@@ -71,10 +72,10 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title" id="preview">Image</h4>
+        <h4 class="modal-title" id="preview"></h4>
       </div>
       <div class="modal-body">
-        <img src="" id="imagepreview">
+        <img src="" id="imagepreview" height="600" class="img-rounded">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
