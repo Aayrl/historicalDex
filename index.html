@@ -9,6 +9,7 @@
 	<script src="/js/bootstrap.min.js"></script>
 
 	<style>
+		.navbar{border-radius:0;}
 		.panel-body,
 		.modal-body {
 			text-align:center; 
@@ -108,6 +109,23 @@
 	</script>
 </head>
 <body>
+
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Aayrl</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="https://aayrl.github.io/" target="_blank" rel="noopener noreferrer">Home</a></li>
+			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#" target="_blank" rel="noopener noreferrer">Historical Dex</a></li>
+					<li><a href="https://aayrl.github.io/millMap/">Mill Map</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav>
 
 <div class="modal fade" id="large-image" tabindex="-1" role="dialog">
   <div class="modal-dialog">
